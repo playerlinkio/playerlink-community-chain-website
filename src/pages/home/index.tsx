@@ -1,5 +1,4 @@
 import { Fragment } from 'react'
-import Image from 'next/image'
 import { Popover, Transition } from '@headlessui/react'
 import {
     AnnotationIcon,
@@ -51,7 +50,7 @@ export default function Home() {
                         <div className="flex justify-start lg:w-0 lg:flex-1">
                             <a href="#">
                                 <span className="sr-only">Workflow</span>
-                                <Image
+                                <img
                                     className="h-8 w-auto sm:h-10"
                                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                                     alt=""
@@ -155,7 +154,7 @@ export default function Home() {
                                 <div className="pt-5 pb-6 px-5">
                                     <div className="flex items-center justify-between">
                                         <div>
-                                            <Image
+                                            <img
                                                 className="h-8 w-auto"
                                                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                                                 alt="Workflow"
@@ -226,7 +225,7 @@ export default function Home() {
                         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                             <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
                                 <div className="absolute inset-0">
-                                    <Image
+                                    <img
                                         className="h-full w-full object-cover"
                                         src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
                                         alt="People working on laptops"
@@ -271,27 +270,27 @@ export default function Home() {
                             </p>
                             <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
                                 <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                                    <Image className="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple" />
+                                    <img className="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple" />
                                 </div>
                                 <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                                    <Image className="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage" />
+                                    <img className="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage" />
                                 </div>
                                 <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                                    <Image
+                                    <img
                                         className="h-12"
                                         src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
                                         alt="StaticKit"
                                     />
                                 </div>
                                 <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
-                                    <Image
+                                    <img
                                         className="h-12"
                                         src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
                                         alt="Transistor"
                                     />
                                 </div>
                                 <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
-                                    <Image
+                                    <img
                                         className="h-12"
                                         src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
                                         alt="Workcation"
