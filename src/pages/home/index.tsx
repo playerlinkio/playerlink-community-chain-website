@@ -9,32 +9,32 @@ import {
     XIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+import Link from 'next/link'
 
 const navigation = [
     { name: 'Docs', href: '#' },
     { name: 'Community', href: '#' },
-    { name: 'Networks', href: '#' },
     { name: 'Tokens', href: '#' },
     { name: 'About', href: '#' },
 ]
 const twotext=[
     {
         img:"https://darwinia.network/static/media/interoperability.cba25090.svg",
-        h1:"Cross-chain Interoperability",
-        h2:"Darwinia Network provides an entrance to the Polkadot ecology for projects that have been deployed on public blockchains such as Ethereum and BSC.",
+        h1:"Cross-chain Composability",
+        h2:"PlayerLink Network is a trust-free service function Network developed based on Subtrate.",
 
 
     },
     {
         img:"https://darwinia.network/static/media/smart-contract.6d26a651.svg",
-        h1:"Smart Contract Solution",
-        h2:"Darwinia Smart App is compatible with the Ethereum virtual machine, and supports DApps such as Defi and NFT, which can be easily migrated to Polkadot.",
+        h1:"No Smart Contract Scheme",
+        h2:"PlayerLink can easily interact with the blockchain without writing any smart contracts.",
 
     },
     {
         img:"https://darwinia.network/static/media/smart-contract.6d26a651.svg",
-        h1:"1mart Contract Solution",
-        h2:"Darwinia Smart App is compatible with the Ethereum virtual machine, and supports DApps such as Defi and NFT, which can be easily migrated to Polkadot.",
+        h1:"Offline validation",
+        h2:"By integrating aggregation and threshold signatures with zk-SNARKs, PlayerLink enables thousands of services to run and use simultaneously.",
 
     },
 
@@ -109,7 +109,7 @@ const toend=[
         h7:"",
         h7url:"#"
     },{
-        title:"USE DARWINIA",
+        title:"USE PLAYERLINK",
         h1:"Apps",
         h1url:"https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.playerlink.io#/settings",
         h2:"Wormhole",
@@ -127,26 +127,26 @@ export default function Home() {
         <div className="min-h-screen ">
             <header>
                 <Popover className="relative ">
-                    <div className="flex  fixed z-40 inset-x-0 bg-black bg-opacity-0 md:bg-opacity-75 justify-between items-center p-5 sm:px-6 md:justify-start md:space-x-10 lg:px-32 ">
+                    <div className="flex  fixed z-20 inset-x-0 bg-black mb-10  justify-between  items-center p-3 md:p-3 sm:px-6 lg:justify-start md:space-x-10 2xl:pl-32">
                         <div className="flex justify-start lg:w-0 lg:flex-1">
                             <a href="home">
                                 <span className="sr-only">Workflow</span>
                                 <img
                                     className="h-8 w-auto sm:h-10"
-                                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                                    src="/pllogo.svg"
                                     alt=""
                                 />
                             </a>
                         </div>
 
-                        <div className="flex -mr-2 -my-2 md:hidden">
+                        <div className="flex -mr-2 -my-2 lg:hidden">
                             <Popover.Button className="bg-white rounded-md p-2  inline-flex items-center  justify-center text-black text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                                 <span className="sr-only">Open menu</span>
                                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
                             </Popover.Button>
 
                         </div>
-                        <Popover.Group as="nav" className="hidden md:flex space-x-10  ">
+                        <Popover.Group as="nav" className="hidden lg:flex space-x-10  ">
                             {navigation.map((item) => (
                                 <a key={item.name} href={item.href} className="text-xl rounded-lg p-2 font-medium text-gray-50 active:bg-red-50 hover:bg-blue-500">
                                     {item.name}
@@ -154,7 +154,7 @@ export default function Home() {
                             ))}
 
                         </Popover.Group>
-                        <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                        <div className="hidden lg:flex items-center justify-end md:flex-1 lg:w-0">
                             <a
                                 href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet.playerlink.io#/settings"
                                 className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-xl font-medium text-white bg-indigo-600 hover:bg-indigo-700"
@@ -163,7 +163,7 @@ export default function Home() {
                             </a>
 
                         </div>
-                        <div className="hidden md:flex text-gray-50 items-center justify-end md:flex-1 lg:w-0 text-xl ">
+                        <div className="hidden lg:flex text-gray-50 items-center justify-end lg:flex-1 lg:w-0 text-xl ">
                             <a  className="mr-5 hover:text-blue-400" href=""><i className="fa fa-twitter" aria-hidden="true"></i></a>
                             <a className="mr-5 hover:text-blue-400" href=""><i className="fa fa-telegram" aria-hidden="true"></i></a>
                             <a className="mr-5 hover:text-blue-400" href=""><i className="fa fa-envelope-o" aria-hidden="true"></i></a>
@@ -181,18 +181,20 @@ export default function Home() {
                     >
                         <Popover.Panel
                             focus
-                            className="absolute z-50 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                            className="absolute z-50 top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden"
                         >
                             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                                 <div className="pt-5 pb-6 px-5 ">
                                     <div className="flex items-center justify-between ">
                                         <div>
-                                            <a href="home">
+                                            <Link href="/home">
+                                            <a>
                                                 <img
                                                     className="h-8 w-auto"
-                                                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                                                    src="https://cdn.discordapp.com/attachments/897398778166906911/918367515242029106/viewfile.png"
                                                     alt="Workflow"
                                                 /></a>
+                                            </Link>
                                         </div>
                                         <div className="-mr-2">
                                             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -242,9 +244,9 @@ export default function Home() {
                                 <div className="p-5">
                                     <div className=" text-lg block text-indigo-600 font-extrabold tracking-tight sm:text-4xl ">
                                         <div className="mb-3">
-                                            Darwinia Network</div>
-                                        <div className="text-2xl sm:text-4xl">
-                                            Web3.0 Cross-Chain Bridge Hub
+                                            PlayerLink Network</div>
+                                        <div className="text-2xl sm:text-4xl xl:w-7/12">
+                                            Is a trust free service link to the grassroots network
                                         </div>
                                     </div>
                                     <div className="pt-10 space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid  sm:gap-5">
@@ -281,7 +283,7 @@ export default function Home() {
                                                 className="flex  items-center justify-center px-4 py-3 border border-transparent text-sm md:text-base font-medium rounded-md shadow-sm text-white bg-indigo-500  sm:px-8 transform duration-500 hover:shadow-2xl hover:-translate-y-1"
                                             >
                                                 <i className="" ></i>
-                                                Learn more about Darwinia’s Technology
+                                                Learn more about PlayerLink Technology
                                             </a>
                                         </div>
                                     </div>
@@ -289,63 +291,62 @@ export default function Home() {
                             </div>
                         </div>
                         {/* TWO   */}
-                        <div className="shadow-xl  bg-gray-800 sm:overflow-hidden" >
-                            <div className=" px-8 py-16 text-white md:p-16">
-                                <div className="md:pl-20  md:pr-20">
-                                    <h1 className="text-center text-2xl tracking-tight sm:text-4xl mb-10 ">
-                                        <span className="block font-extrabold  mb-5 md:mb-10">Powering the Darwinia Network</span>
-                                    </h1>
-                                    <h2 className="text-center">The native tokens for Darwinia Network are RING, KTON.<br></br>
-                                        KTON is a derivative commitment token of RING, which encourages long-term involvement.</h2>
-                                    <div className="flex mt-10 flex-wrap justify-center ">
-                                        <div className="flex max-w-xl mb-5 md:mx-5  bg-blue-300 p-5 rounded-lg">
-                                            <div className="p-2">
-                                                <img className="w-72" src="https://darwinia.network/static/media/token-ring.a11e2478.svg" alt=""/>
-                                                <div className="text-center mt-5">
-                                                RING</div>
-                                            </div>
-                                            <div className="ml-8">
-                                                <h1 className=" mb-3 text-lg md:text-2xl">Title</h1>
-                                                <h2 className="mb-2">The native tokens for Darwinia Network is RING, RING can be used as gas for transactions. Gas include transaction fees, contract execution fees, network bandwidth charges, storage fees, and more.</h2>
-                                                </div>
-                                        </div >
-                                        <div className="flex  md:max-w-xl  mb-5 md:mx-5    bg-blue-300 p-5 rounded-lg">
-                                            <div className="p-2">
-                                                <img className="w-72" src="https://darwinia.network/static/media/token-kton.74d46974.svg" alt=""/>
-                                                <div className="text-center mt-5">
-                                                    KTON
-                                                </div>
-                                            </div>
-                                            <div className="ml-8">
-                                                <h1 className=" mb-3 text-lg md:text-2xl">Title</h1>
-                                                <h2 className="mb-2">
-                                                    To encourage users to make long term commitments and pledge, users can choose to lock RING for 3 - 36 months in the process of Staking, and the system will offer a KTON token as reward for users participating in Staking.
-                                                </h2>
+                        {/*<div className="shadow-xl  bg-gray-800 sm:overflow-hidden" >*/}
+                        {/*    <div className=" px-8 py-16 text-white md:p-16">*/}
+                        {/*        <div className="md:pl-20  md:pr-20">*/}
+                        {/*            <h1 className="text-center text-2xl tracking-tight sm:text-4xl mb-10 ">*/}
+                        {/*                <span className="block font-extrabold  mb-5 md:mb-10">Powering the PlayerLink Serve</span>*/}
+                        {/*            </h1>*/}
+                        {/*            <h2 className="text-center">PlayerLink native token is PL.</h2>*/}
+                        {/*            <div className="flex mt-10 flex-wrap justify-center ">*/}
+                        {/*                <div className="flex max-w-xl mb-5 md:mx-5  bg-blue-300 p-5 rounded-lg">*/}
+                        {/*                    <div className="p-2">*/}
+                        {/*                        <img className="w-72" src="https://darwinia.network/static/media/token-ring.a11e2478.svg" alt=""/>*/}
+                        {/*                        <div className="text-center mt-5">*/}
+                        {/*                        RING</div>*/}
+                        {/*                    </div>*/}
+                        {/*                    <div className="ml-8">*/}
+                        {/*                        <h1 className=" mb-3 text-lg md:text-2xl">Title</h1>*/}
+                        {/*                        <h2 className="mb-2">The native tokens for Darwinia Network is RING, RING can be used as gas for transactions. Gas include transaction fees, contract execution fees, network bandwidth charges, storage fees, and more.</h2>*/}
+                        {/*                        </div>*/}
+                        {/*                </div >*/}
+                        {/*                <div className="flex  md:max-w-xl  mb-5 md:mx-5    bg-blue-300 p-5 rounded-lg">*/}
+                        {/*                    <div className="p-2">*/}
+                        {/*                        <img className="w-72" src="https://darwinia.network/static/media/token-kton.74d46974.svg" alt=""/>*/}
+                        {/*                        <div className="text-center mt-5">*/}
+                        {/*                            KTON*/}
+                        {/*                        </div>*/}
+                        {/*                    </div>*/}
+                        {/*                    <div className="ml-8">*/}
+                        {/*                        <h1 className=" mb-3 text-lg md:text-2xl">Title</h1>*/}
+                        {/*                        <h2 className="mb-2">*/}
+                        {/*                            To encourage users to make long term commitments and pledge, users can choose to lock RING for 3 - 36 months in the process of Staking, and the system will offer a KTON token as reward for users participating in Staking.*/}
+                        {/*                        </h2>*/}
 
-                                            </div>
+                        {/*                    </div>*/}
 
-                                        </div>
-                                    </div>
-                                    <div className="flex justify-center">
-                                    <div className="pt-10 space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid  sm:gap-5">
-                                        <a
-                                            href="#"
-                                            className="flex  items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-black  sm:px-8 transform duration-500 hover:shadow-2xl hover:-translate-y-1"
-                                        >
-                                            <i className="" ></i>
-                                            Learn more
-                                        </a>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {/*                </div>*/}
+                        {/*            </div>*/}
+                        {/*            <div className="flex justify-center">*/}
+                        {/*            <div className="pt-10 space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid  sm:gap-5">*/}
+                        {/*                <a*/}
+                        {/*                    href="#"*/}
+                        {/*                    className="flex  items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-black  sm:px-8 transform duration-500 hover:shadow-2xl hover:-translate-y-1"*/}
+                        {/*                >*/}
+                        {/*                    <i className="" ></i>*/}
+                        {/*                    Learn more*/}
+                        {/*                </a>*/}
+                        {/*            </div>*/}
+                        {/*            </div>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
                         {/*three*/}
                         <div className="shadow-xl  bg-white sm:overflow-hidden" >
                             <div className=" px-8 py-16 text-black md:p-16">
                                 <div className="md:pl-20  md:pr-20">
                                     <h1 className="text-center text-2xl tracking-tight sm:text-4xl mb-10 ">
-                                        <span className="block  mb-5 md:mb-10">Join the Projects Already Building on Moonbeam</span>
+                                        <span className="block  mb-5 md:mb-10">Join the Projects Already Building on PlayerLink</span>
                                     </h1>
                                     <h2 className="text-center text-lg">More Integrations. More Builders. More Deployments.
                                        </h2>
@@ -366,7 +367,7 @@ export default function Home() {
                                             className="flex  items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-black  sm:px-8 transform duration-500 hover:shadow-2xl hover:-translate-y-1 hover:text-blue-400"
                                         >
 
-                                            See More Moonbuilders
+                                            See More PlayerLinker
                                             <i className="fa fa-arrow-right pl-2" aria-hidden="true"></i>
                                         </a>
                                     </div>
@@ -382,21 +383,20 @@ export default function Home() {
                                  style={{backgroundImage:"url('https://img.zcool.cn/community/015b1456cd26db32f875520f3f7a84.jpg@1280w_1l_2o_100sh.jpg')"}}>
                                 <div className="md:pl-20  md:pr-20">
                                     <h1 className="flex justify-center text-3xl tracking-tight sm:text-4xl mb-10 md:mb-20">
-                                        <span className="block font-normal  ">DEV TEAM</span>
+                                        <span className="block font-normal  ">Community  Team</span>
                                     </h1>
                                     <div className="   -mt-8  ">
                                         <div className="   mb-5  md:mb-16  ">
                                             <div className="flex justify-center">
                                                 <h1 className="mb-3  text-center ">
-                                                    Itering is a blockchain technology company, established in Singapore,2018.<br></br>
-                                                    We focus on the research and development of blockchain infrastructure, especially the cross-chain technology.</h1>
+                                                   PlayerLink is a network of untrusted blockchain services built and driven by the community.</h1>
                                             </div>
                                         </div >
                                     </div>
                                     <div className="flex justify-center">
                                         <div className="pt-10 space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid  sm:gap-5 ">
                                             <a
-                                                href="#"
+                                                href="https://playerlink.org/careers"
                                                 className="flex  items-center justify-center px-10 py-3 border border-transparent text-base rounded-md shadow-sm text-black bg-white   md:px-16 transform duration-500 hover:shadow-2xl hover:-translate-y-1 hover:text-blue-400"
                                             >
 
